@@ -1,7 +1,7 @@
 
 mkdir -p /tmp/work 
 
-#function comment(){
+function comment(){
   apt install -y git cmake wget libtbb-dev \
   libavcodec-dev libgtk-3-dev libavformat-dev libswscale-dev libavfilter-dev build-essential 
       
@@ -29,7 +29,6 @@ mkdir -p /tmp/work
  cmake --build . --config Release -j $(nproc) 
  make install 
 
-#}
 
 read -p "press Enter to continue"
 
@@ -37,6 +36,7 @@ rm -rf /tmp/work/opencv
 
 read -p "press Enter to continue"
 
+}
 
 cp -rf . /tmp/work/videosubfinder-src
 cd /tmp/work/videosubfinder-src 
